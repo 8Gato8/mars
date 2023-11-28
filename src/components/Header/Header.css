@@ -1,0 +1,54 @@
+.app__header {
+	margin: 0 auto;
+}
+
+.header {
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__logo {}
+
+.header__links-container {
+	display: flex;
+	align-items: center;
+}
+
+.header__links {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	column-gap: 30px;
+	padding: 0;
+	margin: 0;
+}
+
+.header-links__link {
+	font-family: 'Montserrat';
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.header-links__link_type_general {
+	font-weight: 500;
+	color: #F2E1C2;
+}
+
+.header-links__link_type_general:hover {
+	color: #F23207;
+}
+
+.header-links__link_type_purchase {
+	font-weight: 600;
+	color: #262526;
+	background-color: #F2E1C2;
+	border-radius: 4px;
+	padding: 11px 15px;
+	margin-left: 10px;
+}
+
+.header-links__link_type_purchase:hover {
+	color: #F2E1C2;
+	background-color: #F23207;
+}
