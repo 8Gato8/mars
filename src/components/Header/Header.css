@@ -1,14 +1,11 @@
 .app__header {
-	margin: 0 auto;
+	padding: 0 5px;
 }
 
 .header {
-	max-width: 1200px;
 	display: flex;
 	justify-content: space-between;
 }
-
-.header__logo {}
 
 .header__links-container {
 	display: flex;
@@ -25,12 +22,12 @@
 }
 
 .header-links__link {
-	font-family: 'Montserrat';
 	font-size: 16px;
 	cursor: pointer;
 }
 
 .header-links__link_type_general {
+	font-family: 'Montserrat';
 	font-weight: 500;
 	color: #F2E1C2;
 }
@@ -40,6 +37,7 @@
 }
 
 .header-links__link_type_purchase {
+	font-family: 'Montserrat';
 	font-weight: 600;
 	color: #262526;
 	background-color: #F2E1C2;

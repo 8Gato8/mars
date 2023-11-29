@@ -1,3 +1,24 @@
 .app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: center / cover no-repeat url('../../assets/images/background.jpg');
+}
+
+.app__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 121px;
   padding-top: 30px;
+  max-width: 1210px;
+  margin: 0 auto;
 }
