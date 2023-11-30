@@ -13,20 +13,34 @@
 	grid-row: 1/3;
 }
 
-.vector__small-circle {}
+.vector__line {
+	height: 588px;
+	width: 2px;
+	animation: line-growth 1s ease-in forwards;
+}
 
-.vector__line {}
-
-.vector__big-circle {}
+.vector__big-circle {
+	opacity: 0;
+	visibility: hidden;
+	animation: show-big-circle-and-text 1.1s ease-in 1.4s forwards;
+}
 
 .main__banner {
 	position: relative;
 	grid-column: 2/3;
 	grid-row: 2/3;
 	mix-blend-mode: screen;
+	cursor: default;
 }
 
-.main__title-block {
+.main__video {
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	/* animation: show-big-circle-and-text .6s ease-in 1.2s forwards; */
+}
+
+.main__title {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -35,19 +49,14 @@
 	color: #FFF;
 	background-color: #000;
 	mix-blend-mode: multiply;
-}
-
-.main__video {
-	width: 100%;
-	height: 100%;
-}
-
-.main__title {
 	font-family: 'Bebas Neue';
 	font-size: 715.255px;
 	font-weight: 700;
 	letter-spacing: -10.729px;
 	line-height: 0.93;
+	visibility: hidden;
+	opacity: 0;
+	animation: show-big-circle-and-text 1.1s ease-in 1.4s forwards;
 	margin: 0;
 }
 
@@ -61,4 +70,29 @@
 	letter-spacing: 0.9px;
 	margin: 10px 0 0 27px;
 	margin-top: 10px 0 0 0;
+	opacity: 0;
+	animation: text-transition 1.1s ease-in .3s forwards;
+}
+
+@keyframes text-transition {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes line-growth {
+	from {
+		height: 0;
+	}
+
+	to {
+		height: 588px;
+	}
+}
+
+@keyframes show-big-circle-and-text {
+	to {
+		visibility: visible;
+		opacity: 1;
+	}
 }
