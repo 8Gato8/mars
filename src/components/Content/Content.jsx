@@ -1,4 +1,5 @@
 import './Content.css';
+import mars from '../../assets/mars.mp4';
 
 function Content() {
   return (
@@ -34,8 +35,8 @@ function Content() {
       </div>
       <p className="main__text">ТОЧКА НАЗНАЧЕНИЯ:</p>
       <div className="main__banner">
-        <video className="main__video" autoPdlay loop>
-          <source src="../../assets/Mars.mp4" type="video/mp4" />
+        <video className="main__video" autoPlay muted loop>
+          <source src={mars} type="video/mp4" />
         </video>
         <div className="main__title-block">
           <h1 className="main__title">МАРС</h1>
