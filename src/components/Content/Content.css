@@ -29,15 +29,14 @@
 	position: relative;
 	grid-column: 2/3;
 	grid-row: 2/3;
-	mix-blend-mode: screen;
+	mix-blend-mode: exclusion;
 	cursor: default;
 }
 
 .main__video {
 	width: 100%;
 	height: 100%;
-	visibility: hidden;
-	/* animation: show-big-circle-and-text .6s ease-in 1.2s forwards; */
+	opacity: 0;
 }
 
 .main__title {
@@ -48,13 +47,11 @@
 	width: 100%;
 	color: #FFF;
 	background-color: #000;
-	mix-blend-mode: multiply;
 	font-family: 'Bebas Neue';
 	font-size: 715.255px;
 	font-weight: 700;
 	letter-spacing: -10.729px;
 	line-height: 0.93;
-	visibility: hidden;
 	opacity: 0;
 	animation: show-big-circle-and-text 1.1s ease-in 1.4s forwards;
 	margin: 0;
@@ -71,7 +68,7 @@
 	margin: 10px 0 0 27px;
 	margin-top: 10px 0 0 0;
 	opacity: 0;
-	animation: text-transition 1.1s ease-in .3s forwards;
+	animation: text-transition 1.1s ease-in .2s forwards;
 }
 
 @keyframes text-transition {
@@ -93,6 +90,12 @@
 @keyframes show-big-circle-and-text {
 	to {
 		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes video {
+	to {
 		opacity: 1;
 	}
 }
